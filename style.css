@@ -144,7 +144,7 @@ nav ul li a:hover {
 /* Hero Section */
 .hero {
     position: relative;
-    background: url('herobackground.png') no-repeat center center;
+    background: url('logo/herobackground.png') no-repeat center center;
     background-size: cover;
     background-position: center;
     height: 100vh;
