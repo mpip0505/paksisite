@@ -120,17 +120,6 @@
                         <p>Advanced MCT systems for safe cable and pipe penetration through bulkheads and decks.</p>
                     </div>
                 </div>
-                <!--
-                <div class="product-card">
-                    <div class="product-image">
-                        <i class="fas fa-life-ring"></i>
-                    </div>
-                    <div class="product-info">
-                        <h3>Military Gear</h3>
-                        <p>Certified life saving equipment and appliances for naval and maritime operations.</p>
-                    </div>
-                </div>
-                -->
                 <div class="product-card">
                     <div class="product-image">
                         <img src="logo/valve.png" alt="valve">
@@ -152,30 +141,6 @@
             </div>
         </div>
     </section>
-<!--
-    <section id="clients" class="clients">
-        <div class="container">
-            <div class="section-title">
-                <h2>Our Clients</h2>
-                <p>Serving Malaysia's premier defense and maritime organizations</p>
-            </div>
-            <div class="clients-grid">
-                <div class="client-item">
-                    <img src="rmnlogo.png" alt="Royal Malaysian Navy">
-                </div>
-                <div class="client-item">
-                    <img src="pdrmlogo.svg" alt="Royal Malaysian Police">
-                </div>
-                <div class="client-item">
-                    <img src="mmealogo.jpg" alt="Malaysian Maritime Enforcement Agency">
-                </div>
-                <div class="client-item">
-                    <img src="mindef.png" alt="Ministry of Defence">
-                </div>
-            </div>
-        </div>
-    </section>
--->
     <!-- Brands Section -->
     <section id="brands" class="brands">
         <div class="container">
@@ -380,10 +345,9 @@
                 const message = document.getElementById('message').value;
                 
                 if (!name || !email || !organization || !subject || !message) {
-                    e.preventDefault(); // ❗ block only if something is missing
+                    e.preventDefault();
                     alert('Please fill in all fields.');
                 }
-                // ✅ if everything is filled, it will submit to FormSubmit automatically
             });
         }
 
