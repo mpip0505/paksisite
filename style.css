@@ -311,41 +311,6 @@ nav ul li a:hover {
     color: #1a365d;
 }
 
-/* Clients Section */
-.clients {
-    background-color: #f1f8ff;
-}
-
-.clients-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 30px;
-    align-items: center;
-}
-
-.client-item {
-    background-color: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-    text-align: center;
-    height: 120px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.client-item img {
-    max-width: 100%;
-    max-height: 80px;
-    filter: grayscale(100%);
-    transition: filter 0.3s;
-}
-
-.client-item:hover img {
-    filter: grayscale(0%);
-}
-
 /* Brands Section */
 .brands-grid {
     display: grid;
