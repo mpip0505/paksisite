@@ -17,7 +17,7 @@ body {
 }
 
 .icon{
-    width: 64px;        /* adjust size to what you need */
+    width: 128px;        /* adjust size to what you need */
     height: 64px;       /* same as width to keep circle */
     border-radius: 50%; /* ensures perfect circle */
     object-fit: cover;  /* makes sure it stays inside the box */
