@@ -52,10 +52,10 @@ Background: #f9f9f9 (Light gray)
 
 ### Content Updates
 
-Company Info: Update text in About Us section
-Products/Services: Modify cards in respective sections
-Contact Details: Update addresses, phone, email
-Brands/Clients: Replace placeholder images with actual logos
+Company Info: Update text in About Us section  
+Products/Services: Modify cards in respective sections  
+Contact Details: Update addresses, phone, email  
+Brands/Clients: Replace placeholder images with actual logos  
 Logo Replacement: Replace paksilogo.png with your company logo file. Supported formats: PNG, JPG, SVG.
 
 ## 📞 Contact Information
