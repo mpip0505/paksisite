@@ -10,37 +10,35 @@ This is a responsive company website built with HTML, CSS, and JavaScript to sho
 
 Paksi Laksana Sdn Bhd is a trading and service company founded in 2000, specializing in:
 
-Defense and maritime equipment supply
-Naval cables and systems
-Technical support and logistics solutions
-Serving Royal Malaysian Navy, Police, and Maritime Enforcement Agency
+Defense and maritime equipment supply  
+Naval cables and systems  
+Technical support and logistics solutions  
+Serving Royal Malaysian Navy, Police, and Maritime Enforcement Agency  
 
 ## 🚀 Features
 
 ### Core Sections
 
-Home/Hero: Compelling introduction with call-to-action
-About Us: Company history and expertise
-Services: Naval equipment supply, technical support, logistics
-Products: Specialized defense and maritime products
-Clients: Major defense organizations served
-Brands: Global manufacturers represented
-Contact: Inquiry form and company locations
-Technical Features
+Home/Hero: Compelling introduction with call-to-action  
+About Us: Company history and expertise  
+Services: Naval equipment supply, technical support, logistics  
+Products: Specialized defense and maritime products  
+Contact: Inquiry form and company locations  
+Technical Features  
 
-✅ Fully responsive design (mobile, tablet, desktop)
-✅ Smooth scrolling navigation
-✅ Interactive elements and hover effects
-✅ Form validation
-✅ Professional defense-sector styling
-✅ Fast loading and optimized code
-🛠️ Technologies Used
+✅ Fully responsive design (mobile, tablet, desktop)  
+✅ Smooth scrolling navigation  
+✅ Interactive elements and hover effects  
+✅ Form validation  
+✅ Professional defense-sector styling  
+✅ Fast loading and optimized code  
+🛠️ Technologies Used  
 
-HTML5 - Semantic markup structure
-CSS3 - Modern styling with Flexbox/Grid
-JavaScript - Interactive functionality
-Font Awesome - Icons
-Google Fonts - Typography (Montserrat, Roboto)
+HTML5 - Semantic markup structure  
+CSS3 - Modern styling with Flexbox/Grid  
+JavaScript - Interactive functionality  
+Font Awesome - Icons  
+Google Fonts - Typography (Montserrat, Roboto)  
 
 ## 🎨 Customization Guide
 
