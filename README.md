@@ -4,7 +4,7 @@ A professional website for Paksi Laksana Sdn Bhd, a defense and maritime trading
 
 ## 📋 Project Overview
 
-This is a responsive company website built with HTML, CSS, and JavaScript to showcase Paksi Laksana's services, products, and expertise in the defense and maritime sector.
+This is a static company website built with HTML, CSS, and JavaScript to showcase Paksi Laksana's services, products, and expertise in the defense and maritime sector.
 
 ## 🎯 Company Profile
 
@@ -37,9 +37,7 @@ Paksi Laksana Sdn Bhd is a trading and service company founded in 2000, speciali
 
 - HTML5 - Semantic markup structure  
 - CSS3 - Modern styling with Flexbox/Grid  
-- JavaScript - Interactive functionality  
 - Font Awesome - Icons  
-- Google Fonts - Typography (Montserrat, Roboto)  
 
 ## 🎨 Customization Guide
 
