@@ -27,12 +27,11 @@ Paksi Laksana Sdn Bhd is a trading and service company founded in 2000, speciali
 
 ### Technical Features  
 
-✅ Fully responsive design (mobile, tablet, desktop)  
-✅ Smooth scrolling navigation  
-✅ Interactive elements and hover effects  
-✅ Form validation  
-✅ Professional defense-sector styling  
-✅ Fast loading and optimized code  
+- Fully responsive design (mobile, tablet, desktop)
+- Smooth scrolling navigation
+- Interactive elements and hover effects-
+- Professional defense-sector styling  -
+- Fast loading and optimized code  
 
 ## 🛠️ Technologies Used  
 
