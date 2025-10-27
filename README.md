@@ -37,7 +37,7 @@ Paksi Laksana Sdn Bhd is a trading and service company founded in 2000, speciali
 
 - HTML5 - Semantic markup structure  
 - CSS3 - Modern styling with Flexbox/Grid  
-- Font Awesome - Icons  
+- Favicon - Icons  
 
 ## 🎨 Customization Guide
 
