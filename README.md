@@ -24,7 +24,8 @@ About Us: Company history and expertise
 Services: Naval equipment supply, technical support, logistics  
 Products: Specialized defense and maritime products  
 Contact: Inquiry form and company locations  
-Technical Features  
+
+### Technical Features  
 
 ✅ Fully responsive design (mobile, tablet, desktop)  
 ✅ Smooth scrolling navigation  
@@ -32,7 +33,8 @@ Technical Features
 ✅ Form validation  
 ✅ Professional defense-sector styling  
 ✅ Fast loading and optimized code  
-🛠️ Technologies Used  
+
+## 🛠️ Technologies Used  
 
 HTML5 - Semantic markup structure  
 CSS3 - Modern styling with Flexbox/Grid  
