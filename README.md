@@ -4,7 +4,7 @@ A professional website for Paksi Laksana Sdn Bhd, a defense and maritime trading
 
 ## 📋 Project Overview
 
-This is a static company website built with HTML, CSS, and JavaScript to showcase Paksi Laksana's services, products, and expertise in the defense and maritime sector.
+This is a static company website built with HTML and CSS to showcase Paksi Laksana's services, products, and expertise in the defense and maritime sector.
 
 ## 🎯 Company Profile
 
