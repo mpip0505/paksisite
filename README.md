@@ -42,18 +42,6 @@ JavaScript - Interactive functionality
 Font Awesome - Icons
 Google Fonts - Typography (Montserrat, Roboto)
 
-## 📁 File Structure
-
-text
-paksi-laksana-website/
-│
-├── index.html              # Main website file
-├── paksilogo.png           # Company logo
-├── README.md               # Project documentation
-└── assets/                 # Additional resources (optional)
-    ├── images/             # Website images
-    └── documents/          # Company brochures (optional)
-
 ## 🎨 Customization Guide
 
 ### Colors (CSS Variables)
