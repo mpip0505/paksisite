@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <title>Paksi Laksana Sdn Bhd - Defense & Maritime Trading Specialists</title>
+    <meta name="description" content="Paksi Laksana Sdn Bhd supplies naval cables, MCT systems, valves and specialized equipment to Malaysia's defense and maritime sector since 2000.">
+    <meta property="og:title" content="Paksi Laksana Sdn Bhd - Defense & Maritime Trading Specialists">
+    <meta property="og:description" content="Naval and maritime supplies delivered with integrity, reliability, and operational excellence.">
+    <meta property="og:image" content="https://www.paksisb.com/logo/herobackground.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
@@ -20,9 +24,10 @@
                 <div class="logo-text">
                     <h1>Paksi Laksana Sdn Bhd</h1>
                 </div>
+            </div>
             <!-- Hamburger (checkbox trick) -->
             <input type="checkbox" id="menu-toggle">
-            <label for="menu-toggle" class="menu-icon">☰</label>
+            <label for="menu-toggle" class="menu-icon" aria-label="Toggle menu"><i class="fas fa-bars"></i></label>
 
             <nav>
                 <ul>
@@ -41,9 +46,36 @@
     <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="container hero-content">
-            <h2>Defense & Maritime Trading Specialists</h2>
+            <span class="hero-eyebrow">Since 2000 &middot; Kuala Lumpur &amp; Lumut</span>
+            <h2>Defense &amp; Maritime <span class="accent">Trading Specialists</span></h2>
             <p>Paksi Laksana Sdn Bhd delivers naval and maritime supplies with integrity, reliability, and operational excellence.</p>
-            <a href="#contact" class="btn">Contact Us</a>
+            <div class="hero-actions">
+                <a href="#contact" class="btn">Contact Us</a>
+                <a href="#products" class="btn btn-outline">View Products</a>
+            </div>
+        </div>
+        <a href="#about" class="scroll-indicator" aria-label="Scroll down"><span></span></a>
+    </section>
+
+    <!-- Stats Strip -->
+    <section class="stats">
+        <div class="container stats-grid">
+            <div class="stat">
+                <span class="stat-number" data-count="25" data-suffix="+">25+</span>
+                <span class="stat-label">Years Serving the Defense Sector</span>
+            </div>
+            <div class="stat">
+                <span class="stat-number" data-count="2">2</span>
+                <span class="stat-label">Offices in Kuala Lumpur &amp; Lumut</span>
+            </div>
+            <div class="stat">
+                <span class="stat-number" data-count="7">7</span>
+                <span class="stat-label">International Brands Represented</span>
+            </div>
+            <div class="stat">
+                <span class="stat-number" data-count="4">4</span>
+                <span class="stat-label">Core Product Lines</span>
+            </div>
         </div>
     </section>
 
@@ -61,6 +93,29 @@
                     <p>Our team is predominantly composed of retired naval officers with extensive expertise in logistics, engineering, and specialized equipment supply. This unique background gives us unparalleled operational knowledge of naval and marine requirements.</p>
                     <p>We are strategically positioned to support Malaysia's defense sector with a focus on delivering high-quality products and services that meet the requirements of military and maritime operations.</p>
                     <a href="#services" class="btn">Our Services</a>
+                </div>
+                <div class="about-highlights">
+                    <div class="highlight">
+                        <div class="highlight-icon"><i class="fas fa-anchor"></i></div>
+                        <div>
+                            <h4>Naval Expertise</h4>
+                            <p>A team of retired naval officers who understand operational requirements first-hand.</p>
+                        </div>
+                    </div>
+                    <div class="highlight">
+                        <div class="highlight-icon"><i class="fas fa-map-marked-alt"></i></div>
+                        <div>
+                            <h4>Strategic Presence</h4>
+                            <p>Branch office in Lumut, close to the Royal Malaysian Navy base.</p>
+                        </div>
+                    </div>
+                    <div class="highlight">
+                        <div class="highlight-icon"><i class="fas fa-shield-alt"></i></div>
+                        <div>
+                            <h4>Trusted Since 2000</h4>
+                            <p>Over two decades supplying Malaysia's defense and maritime sector.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -170,28 +225,27 @@
             </div>
         </div>
     </section>
+-->
     <section id="brands" class="brands">
         <div class="container">
             <div class="section-title">
-                <h2>Our Brands</h2>
+                <h2>Brands We Represent</h2>
                 <p>Representing globally recognized defense and maritime manufacturers</p>
             </div>
             <div class="brands-grid">
-                <div class="brand-item">
-                    <img src="logo/habialogo.png" alt="Habia Cable">
-                </div>
-                <div class="brand-item">
-                    <img src="logo/helmacablogo.png" alt="Helmacab">
-                </div>
-                <div class="brand-item">
-                    <img src="logo/helukabellogo.jpg" alt="Helukabel">
-                </div>
                 <div class="brand-item">
                     <img src="logo/lockheedlogo.png" alt="Lockheed Martin">
                 </div>
                 <div class="brand-item">
                     <img src="logo/avonlogo.webp" alt="AVON Protection Systems">
                 </div>
+                <div class="brand-item">
+                    <img src="logo/habialogo.png" alt="Habia Cable">
+                </div>
+                <div class="brand-item">
+                    <img src="logo/helukabellogo.jpg" alt="Helukabel">
+                </div>
+                
                 <div class="brand-item">
                     <img src="logo/roxteclogo.jpg" alt="Roxtec">
                 </div>
@@ -205,8 +259,6 @@
         </div>
     </section>
 
--->
-
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
@@ -219,7 +271,7 @@
                     <h3>Our Offices</h3>
                     <div class="info-item">
                         <div class="info-icon">
-                            <i href = ""class="fas fa-map-marker-alt"></i>
+                            <i class="fas fa-map-marker-alt"></i>
                         </div>
                         <div>
                             <h4>Headquarters</h4>
@@ -241,7 +293,7 @@
                         </div>
                         <div>
                             <h4>Phone</h4>
-                            <p>+60 3 4270 6356</p>
+                            <p><a href="tel:+60342706356">+60 3 4270 6356</a></p>
                         </div>
                     </div>
                     <div class="info-item">
@@ -250,7 +302,7 @@
                         </div>
                         <div>
                             <h4>Email</h4>
-                            <p>info@paksisb.com</p>
+                            <p><a href="mailto:info@paksisb.com">info@paksisb.com</a></p>
                         </div>
                     </div>
                 </div>
@@ -274,7 +326,7 @@
                         <li><a href="#services">Services</a></li>
                         <li><a href="#products">Products</a></li>
                         <!--<li><a href="#clients">Clients</a></li>
-                        </11><li><a href="#brands">Brands</a></li>-->
+                        <li><a href="#brands">Brands</a></li>-->
                         <li><a href="#contact">Contact Us</a></li>
                     </ul>
                 </div>
@@ -298,37 +350,111 @@
             </div>
             
             <div class="copyright">
-                <p>&copy; 2025 Paksi Laksana Sdn Bhd. All Rights Reserved. | Established 2000</p>
+                <p>&copy; <span id="year">2025</span> Paksi Laksana Sdn Bhd. All Rights Reserved. | Established 2000</p>
             </div>
         </div>
     </footer>
 
+    <a href="#home" class="back-to-top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></a>
+
     <script>
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('nav a, .btn[href^="#"]').forEach(anchor => {
+        // Smooth scrolling for in-page links (offset for fixed header)
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
+                const targetElement = document.querySelector(this.getAttribute('href'));
+                if (!targetElement) return;
                 e.preventDefault();
-                
-                const targetId = this.getAttribute('href');
-                const targetElement = document.querySelector(targetId);
-                
+                document.getElementById('menu-toggle').checked = false;
                 window.scrollTo({
-                    top: targetElement.offsetTop - 80,
+                    top: targetElement.offsetTop - 70,
                     behavior: 'smooth'
                 });
             });
         });
 
 
-        // Header background change on scroll
-        window.addEventListener('scroll', function() {
-            const header = document.querySelector('header');
-            if (window.scrollY > 50) {
-                header.style.backgroundColor = '#1a365d';
-            } else {
-                header.style.backgroundColor = 'rgba(26, 54, 93, 0.95)';
-            }
-        });
+        // Header style and back-to-top button on scroll
+        const header = document.querySelector('header');
+        const backToTop = document.querySelector('.back-to-top');
+        function onScroll() {
+            header.classList.toggle('scrolled', window.scrollY > 50);
+            backToTop.classList.toggle('visible', window.scrollY > 600);
+        }
+        window.addEventListener('scroll', onScroll, { passive: true });
+        onScroll();
+
+        // Highlight the nav link for the section in view
+        const navLinks = document.querySelectorAll('nav a');
+        const sectionObserver = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) return;
+                navLinks.forEach(link => {
+                    link.classList.toggle('active', link.getAttribute('href') === '#' + entry.target.id);
+                });
+            });
+        }, { rootMargin: '-45% 0px -50% 0px' });
+        document.querySelectorAll('section[id]').forEach(section => sectionObserver.observe(section));
+
+        // Reveal elements as they scroll into view, staggered within each group
+        if ('IntersectionObserver' in window) {
+            const revealGroups = [
+                '.section-title',
+                '.about-text',
+                '.about-highlights .highlight',
+                '.stat',
+                '.service-card',
+                '.product-card',
+                '.brand-item',
+                '.contact-info',
+                '.contact-form'
+            ];
+            const revealObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (!entry.isIntersecting) return;
+                    const el = entry.target;
+                    el.classList.add('revealed');
+                    observer.unobserve(el);
+                    // Once revealed, drop the reveal styles so hover effects stay snappy
+                    setTimeout(() => {
+                        el.classList.remove('reveal', 'revealed');
+                        el.style.transitionDelay = '';
+                    }, 1300);
+                });
+            }, { threshold: 0.15 });
+            revealGroups.forEach(selector => {
+                document.querySelectorAll(selector).forEach((el, i) => {
+                    el.classList.add('reveal');
+                    el.style.transitionDelay = (i % 4) * 0.1 + 's';
+                    revealObserver.observe(el);
+                });
+            });
+
+        }
+
+        // Count up the stats once they appear
+        const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        const counterObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) return;
+                observer.unobserve(entry.target);
+                if (prefersReducedMotion) return;
+                const el = entry.target;
+                const target = parseInt(el.dataset.count, 10);
+                const suffix = el.dataset.suffix || '';
+                const start = performance.now();
+                const duration = 1500;
+                function tick(now) {
+                    const progress = Math.min((now - start) / duration, 1);
+                    const eased = 1 - Math.pow(1 - progress, 3);
+                    el.textContent = Math.round(target * eased) + suffix;
+                    if (progress < 1) requestAnimationFrame(tick);
+                }
+                requestAnimationFrame(tick);
+            });
+        }, { threshold: 0.5 });
+        document.querySelectorAll('.stat-number').forEach(el => counterObserver.observe(el));
+
+        document.getElementById('year').textContent = new Date().getFullYear();
     </script>
 </body>
 </html>
