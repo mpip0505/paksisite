@@ -57,28 +57,6 @@
         <a href="#about" class="scroll-indicator" aria-label="Scroll down"><span></span></a>
     </section>
 
-    <!-- Stats Strip -->
-    <section class="stats">
-        <div class="container stats-grid">
-            <div class="stat">
-                <span class="stat-number" data-count="25" data-suffix="+">25+</span>
-                <span class="stat-label">Years Serving the Defense Sector</span>
-            </div>
-            <div class="stat">
-                <span class="stat-number" data-count="2">2</span>
-                <span class="stat-label">Offices in Kuala Lumpur &amp; Lumut</span>
-            </div>
-            <div class="stat">
-                <span class="stat-number" data-count="7">7</span>
-                <span class="stat-label">International Brands Represented</span>
-            </div>
-            <div class="stat">
-                <span class="stat-number" data-count="4">4</span>
-                <span class="stat-label">Core Product Lines</span>
-            </div>
-        </div>
-    </section>
-
     <!-- About Section -->
     <section id="about" class="about">
         <div class="container">
@@ -306,6 +284,19 @@
                         </div>
                     </div>
                 </div>
+                <div class="contact-map">
+                    <iframe
+                        src="https://www.google.com/maps?q=Dataran+Palma,+Jalan+Memanda+1/2,+68000+Ampang,+Selangor&output=embed"
+                        title="Paksi Laksana headquarters location"
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        allowfullscreen></iframe>
+                    <div class="contact-actions">
+                        <a href="tel:+60342706356" class="btn"><i class="fas fa-phone"></i> Call Us</a>
+                        <a href="mailto:info@paksisb.com" class="btn btn-outline"><i class="fas fa-envelope"></i> Email Us</a>
+                        <a href="https://www.google.com/maps/dir/?api=1&destination=Dataran+Palma,+Jalan+Memanda+1/2,+68000+Ampang,+Selangor" class="btn btn-outline" target="_blank" rel="noopener"><i class="fas fa-directions"></i> Get Directions</a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -372,7 +363,6 @@
             });
         });
 
-
         // Header style and back-to-top button on scroll
         const header = document.querySelector('header');
         const backToTop = document.querySelector('.back-to-top');
@@ -401,12 +391,11 @@
                 '.section-title',
                 '.about-text',
                 '.about-highlights .highlight',
-                '.stat',
                 '.service-card',
                 '.product-card',
                 '.brand-item',
                 '.contact-info',
-                '.contact-form'
+                '.contact-map'
             ];
             const revealObserver = new IntersectionObserver((entries, observer) => {
                 entries.forEach(entry => {
@@ -430,29 +419,6 @@
             });
 
         }
-
-        // Count up the stats once they appear
-        const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-        const counterObserver = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-                if (!entry.isIntersecting) return;
-                observer.unobserve(entry.target);
-                if (prefersReducedMotion) return;
-                const el = entry.target;
-                const target = parseInt(el.dataset.count, 10);
-                const suffix = el.dataset.suffix || '';
-                const start = performance.now();
-                const duration = 1500;
-                function tick(now) {
-                    const progress = Math.min((now - start) / duration, 1);
-                    const eased = 1 - Math.pow(1 - progress, 3);
-                    el.textContent = Math.round(target * eased) + suffix;
-                    if (progress < 1) requestAnimationFrame(tick);
-                }
-                requestAnimationFrame(tick);
-            });
-        }, { threshold: 0.5 });
-        document.querySelectorAll('.stat-number').forEach(el => counterObserver.observe(el));
 
         document.getElementById('year').textContent = new Date().getFullYear();
     </script>
