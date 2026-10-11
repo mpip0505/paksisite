@@ -250,6 +250,7 @@ nav ul li a.active::after {
     background: url('logo/herobackground.png') no-repeat center center;
     background-size: cover;
     z-index: 0;
+    translate: 0 var(--hero-shift, 0);
     animation: heroZoom 20s ease-out forwards;
 }
 
@@ -273,6 +274,7 @@ nav ul li a.active::after {
 }
 
 .hero-content {
+    will-change: transform, opacity;
     max-width: 860px;
     margin: 0 auto;
     padding-top: 60px;
@@ -308,6 +310,12 @@ nav ul li a.active::after {
     font-weight: 700;
     margin-bottom: 22px;
     text-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Keep each phrase of the headline on its own unbroken line */
+.hero-content h2 .line {
+    display: block;
+    white-space: nowrap;
 }
 
 .hero-content h2 .accent {
@@ -489,70 +497,6 @@ nav ul li a.active::after {
     color: var(--muted);
 }
 
-/* Products Section */
-.products-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
-}
-
-.product-card {
-    background-color: var(--card);
-    border-radius: var(--radius);
-    overflow: hidden;
-    box-shadow: var(--shadow-sm);
-    display: flex;
-    flex-direction: column;
-}
-
-.product-image {
-    height: 220px;
-    width: 100%;
-    overflow: hidden;
-    background: #ffffff;
-    border-bottom: 1px solid #edf0f5;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-}
-
-.product-image i {
-    font-size: 4rem;
-    color: var(--navy);
-    transition: transform 0.6s var(--ease);
-}
-
-.product-image img {
-    max-height: 100%;
-    max-width: 100%;
-    object-fit: contain;
-    display: block;
-    transition: transform 0.6s var(--ease);
-}
-
-.product-card:hover .product-image img,
-.product-card:hover .product-image i {
-    transform: scale(1.08);
-}
-
-.product-info {
-    padding: 24px;
-    border-top: 3px solid var(--accent);
-    flex: 1;
-}
-
-.product-info h3 {
-    margin-bottom: 10px;
-    color: var(--navy);
-    font-size: 1.15rem;
-}
-
-.product-info p {
-    color: var(--muted);
-    font-size: 0.95rem;
-}
-
 /* Brands Section */
 .brands {
     background-color: var(--bg-alt);
@@ -592,13 +536,11 @@ nav ul li a.active::after {
 
 /* Lift effect shared by cards (.reveal's slower transition wins until the reveal finishes) */
 .service-card,
-.product-card,
 .brand-item {
     transition: transform 0.4s var(--ease), box-shadow 0.4s var(--ease);
 }
 
 .service-card:hover,
-.product-card:hover,
 .brand-item:hover {
     transform: translateY(-8px);
     box-shadow: var(--shadow-lg);
@@ -808,14 +750,66 @@ footer .disclaimer {
     transform: translateY(-4px);
 }
 
-/* Scroll reveal */
-.reveal {
-    opacity: 0;
-    transform: translateY(40px);
-    transition: opacity 0.8s var(--ease), transform 0.8s var(--ease);
+/* Reading progress bar */
+.scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, var(--accent), #f5a65b);
+    transform: scaleX(0);
+    transform-origin: left;
+    z-index: 1001;
+    pointer-events: none;
 }
 
+/* Scroll reveal */
+.about,
+.contact {
+    overflow-x: clip;
+}
+
+.reveal {
+    opacity: 0;
+    transition: opacity 0.9s var(--ease), transform 0.9s var(--ease);
+    transition-delay: var(--reveal-delay, 0s);
+}
+
+.reveal-up    { transform: translateY(40px); }
+.reveal-left  { transform: translateX(-60px); }
+.reveal-right { transform: translateX(60px); }
+.reveal-zoom  { transform: translateY(20px) scale(0.9); }
+
 .reveal.revealed {
+    opacity: 1;
+    transform: none;
+}
+
+/* Service icons pop in just after their card arrives */
+.service-card.reveal .service-icon {
+    opacity: 0;
+    transform: scale(0.5) rotate(-12deg);
+    transition: opacity 0.6s var(--ease), transform 0.7s cubic-bezier(0.34, 1.56, 0.64, 1);
+    transition-delay: calc(var(--reveal-delay, 0s) + 0.35s);
+}
+
+.service-card.revealed .service-icon {
+    opacity: 1;
+    transform: none;
+}
+
+/* Highlight icons and contact icons settle in with their block */
+.highlight.reveal .highlight-icon,
+.contact-info.reveal .info-icon {
+    opacity: 0;
+    transform: scale(0.6);
+    transition: opacity 0.6s var(--ease), transform 0.6s var(--ease);
+    transition-delay: calc(var(--reveal-delay, 0s) + 0.3s);
+}
+
+.highlight.revealed .highlight-icon,
+.contact-info.revealed .info-icon {
     opacity: 1;
     transform: none;
 }
@@ -850,7 +844,10 @@ footer .disclaimer {
         transition-duration: 0.01ms !important;
         transition-delay: 0s !important;
     }
-    .reveal { opacity: 1; transform: none; }
+    .reveal,
+    .reveal .service-icon,
+    .reveal .highlight-icon,
+    .reveal .info-icon { opacity: 1 !important; transform: none !important; }
 }
 
 /* Extra Large Screens (desktops >1200px) */
@@ -915,7 +912,7 @@ footer .disclaimer {
     }
 
     .hero-content h2 {
-        font-size: 2.2rem;
+        font-size: clamp(1.4rem, 7.4vw, 2.6rem);
     }
 
     .hero-content p {
@@ -930,6 +927,11 @@ footer .disclaimer {
 
     .contact-container {
         flex-direction: column;
+    }
+
+    .reveal-left,
+    .reveal-right {
+        transform: translateY(40px);
     }
 
     .contact-map iframe {

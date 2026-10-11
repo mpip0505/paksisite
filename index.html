@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="scroll-progress" aria-hidden="true"></div>
     <!-- Header -->
     <header>
         <div class="container header-container">
@@ -34,7 +35,6 @@
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#services">Services</a></li>
-                <li><a href="#products">Products</a></li>
                 <!--<li><a href="#clients">Clients</a></li>
                 <li><a href="#brands">Brands</a></li>-->
                 <li><a href="#contact">Contact</a></li>
@@ -47,11 +47,11 @@
     <section class="hero" id="home">
         <div class="container hero-content">
             <span class="hero-eyebrow">Since 2000 &middot; Kuala Lumpur &amp; Lumut</span>
-            <h2>Defense &amp; Maritime <span class="accent">Trading Specialists</span></h2>
+            <h2><span class="line">Defense &amp; Maritime</span> <span class="line accent">Trading Specialists</span></h2>
             <p>Paksi Laksana Sdn Bhd delivers naval and maritime supplies with integrity, reliability, and operational excellence.</p>
             <div class="hero-actions">
                 <a href="#contact" class="btn">Contact Us</a>
-                <a href="#products" class="btn btn-outline">View Products</a>
+                <a href="#services" class="btn btn-outline">Our Services</a>
             </div>
         </div>
         <a href="#about" class="scroll-indicator" aria-label="Scroll down"><span></span></a>
@@ -109,10 +109,10 @@
             <div class="services-grid">
                 <div class="service-card">
                     <div class="service-icon">
-                        <i class="fas fa-ship"></i>
+                        <i class="fas fa-shield-halved"></i>
                     </div>
-                    <h3>Naval Equipment Supply</h3>
-                    <p>Specialized supply of naval cables, ropes, valves, and critical components for maritime and defence operations.</p>
+                    <h3>Military Equipment Supply</h3>
+                    <p>Specialized supply of military equipment, cables, ropes, valves, and critical components for defence and maritime operations.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
@@ -127,54 +127,6 @@
                     </div>
                     <h3>Logistics Solutions</h3>
                     <p>End-to-end logistics management for defense sector clients, ensuring timely delivery of critical supplies.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Products Section -->
-    <section id="products" class="products">
-        <div class="container">
-            <div class="section-title">
-                <h2>Our Products</h2>
-                <p>Quality products for defense and maritime applications</p>
-            </div>
-            <div class="products-grid">
-                <div class="product-card">
-                    <div class="product-image">
-                        <img src="logo/cable.webp" alt="Cable">
-                    </div>
-                    <div class="product-info">
-                        <h3>Special & Industrial Navy Cables</h3>
-                        <p>High-performance cables designed for naval applications with exceptional durability and reliability.</p>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <div class="product-image">
-                        <img src="logo/mct.jpg" alt="MCT">
-                    </div>
-                    <div class="product-info">
-                        <h3>Modular Cable Transit (MCT) Systems</h3>
-                        <p>Advanced MCT systems for safe cable and pipe penetration through bulkheads and decks.</p>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <div class="product-image">
-                        <img src="logo/valve.png" alt="valve">
-                    </div>
-                    <div class="product-info">
-                        <h3>Naval Valves</h3>
-                        <p>Specialized valves for naval and maritime applications, built to withstand harsh environments.</p>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <div class="product-image">
-                        <i class="fas fa-archive"></i>
-                    </div>
-                    <div class="product-info">
-                        <h3>Auxiliary Products</h3>
-                    <p>In addition to our core products, we provide a wide range of specialized naval and defense equipment tailored to client requirements.</p>
-                    </div>
                 </div>
             </div>
         </div>
@@ -315,19 +267,17 @@
                         <li><a href="#home">Home</a></li>
                         <li><a href="#about">About Us</a></li>
                         <li><a href="#services">Services</a></li>
-                        <li><a href="#products">Products</a></li>
                         <!--<li><a href="#clients">Clients</a></li>
                         <li><a href="#brands">Brands</a></li>-->
                         <li><a href="#contact">Contact Us</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h3>Products</h3>
+                    <h3>Services</h3>
                     <ul class="footer-links">
-                        <li><a href="#products">Navy Cables</a></li>
-                        <li><a href="#products">MCT Systems</a></li>
-                        <li><a href="#products">Naval Valves</a></li>
-                        <li><a href="#products">Auxiliary Products</a></li>
+                        <li><a href="#services">Military Equipment Supply</a></li>
+                        <li><a href="#services">Technical Support</a></li>
+                        <li><a href="#services">Logistics Solutions</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
@@ -385,17 +335,43 @@
         }, { rootMargin: '-45% 0px -50% 0px' });
         document.querySelectorAll('section[id]').forEach(section => sectionObserver.observe(section));
 
+        const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+        // Reading progress bar and subtle hero parallax
+        const progressBar = document.querySelector('.scroll-progress');
+        const hero = document.querySelector('.hero');
+        const heroContent = document.querySelector('.hero-content');
+        let ticking = false;
+        function updateScrollEffects() {
+            const scrollY = window.scrollY;
+            const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+            progressBar.style.transform = 'scaleX(' + (maxScroll > 0 ? scrollY / maxScroll : 0) + ')';
+            if (!reduceMotion && scrollY < hero.offsetHeight) {
+                hero.style.setProperty('--hero-shift', scrollY * 0.35 + 'px');
+                heroContent.style.transform = 'translateY(' + scrollY * 0.2 + 'px)';
+                heroContent.style.opacity = Math.max(0, 1 - scrollY / (hero.offsetHeight * 0.75));
+            }
+            ticking = false;
+        }
+        window.addEventListener('scroll', () => {
+            if (!ticking) {
+                requestAnimationFrame(updateScrollEffects);
+                ticking = true;
+            }
+        }, { passive: true });
+        updateScrollEffects();
+
         // Reveal elements as they scroll into view, staggered within each group
         if ('IntersectionObserver' in window) {
             const revealGroups = [
-                '.section-title',
-                '.about-text',
-                '.about-highlights .highlight',
-                '.service-card',
-                '.product-card',
-                '.brand-item',
-                '.contact-info',
-                '.contact-map'
+                ['.section-title', 'reveal-up'],
+                ['.about-text', 'reveal-left'],
+                ['.about-highlights .highlight', 'reveal-right'],
+                ['.service-card', 'reveal-up'],
+                ['.brand-item', 'reveal-zoom'],
+                ['.contact-info', 'reveal-left'],
+                ['.contact-map', 'reveal-right'],
+                ['.footer-section', 'reveal-up']
             ];
             const revealObserver = new IntersectionObserver((entries, observer) => {
                 entries.forEach(entry => {
@@ -405,19 +381,18 @@
                     observer.unobserve(el);
                     // Once revealed, drop the reveal styles so hover effects stay snappy
                     setTimeout(() => {
-                        el.classList.remove('reveal', 'revealed');
-                        el.style.transitionDelay = '';
-                    }, 1300);
+                        el.classList.remove('reveal', 'revealed', 'reveal-up', 'reveal-left', 'reveal-right', 'reveal-zoom');
+                        el.style.removeProperty('--reveal-delay');
+                    }, 2000);
                 });
-            }, { threshold: 0.15 });
-            revealGroups.forEach(selector => {
+            }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+            revealGroups.forEach(([selector, variant]) => {
                 document.querySelectorAll(selector).forEach((el, i) => {
-                    el.classList.add('reveal');
-                    el.style.transitionDelay = (i % 4) * 0.1 + 's';
+                    el.classList.add('reveal', variant);
+                    el.style.setProperty('--reveal-delay', (i % 4) * 0.12 + 's');
                     revealObserver.observe(el);
                 });
             });
-
         }
 
         document.getElementById('year').textContent = new Date().getFullYear();
