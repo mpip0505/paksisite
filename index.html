@@ -26,11 +26,9 @@
                     <h1>Paksi Laksana Sdn Bhd</h1>
                 </div>
             </div>
-            <!-- Hamburger (checkbox trick) -->
-            <input type="checkbox" id="menu-toggle">
-            <label for="menu-toggle" class="menu-icon" aria-label="Toggle menu"><i class="fas fa-bars"></i></label>
+            <button type="button" class="menu-icon" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav"><i class="fas fa-bars" aria-hidden="true"></i></button>
 
-            <nav>
+            <nav id="site-nav">
                 <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
@@ -164,26 +162,25 @@
             </div>
             <div class="brands-grid">
                 <div class="brand-item">
-                    <img src="logo/lockheedlogo.png" alt="Lockheed Martin">
+                    <img src="logo/brands/lockheed.webp" alt="Lockheed Martin" style="--w: 135px" loading="lazy">
                 </div>
                 <div class="brand-item">
-                    <img src="logo/avonlogo.webp" alt="AVON Protection Systems">
+                    <img src="logo/brands/avon.webp" alt="AVON Protection Systems" style="--w: 88px" loading="lazy">
                 </div>
                 <div class="brand-item">
-                    <img src="logo/habialogo.png" alt="Habia Cable">
+                    <img src="logo/brands/habia.webp" alt="Habia Cable" style="--w: 122px" loading="lazy">
                 </div>
                 <div class="brand-item">
-                    <img src="logo/helukabellogo.jpg" alt="Helukabel">
-                </div>
-                
-                <div class="brand-item">
-                    <img src="logo/roxteclogo.jpg" alt="Roxtec">
+                    <img src="logo/brands/helukabel.webp" alt="Helukabel" style="--w: 101px" loading="lazy">
                 </div>
                 <div class="brand-item">
-                    <img src="logo/dikkanlogo.png" alt="Dikkan">
+                    <img src="logo/brands/roxtec.webp" alt="Roxtec" style="--w: 115px" loading="lazy">
                 </div>
                 <div class="brand-item">
-                    <img src="logo/unmaklogo.png" alt="Unmak Valve">
+                    <img src="logo/brands/dikkan.webp" alt="Dikkan" style="--w: 108px" loading="lazy">
+                </div>
+                <div class="brand-item">
+                    <img src="logo/brands/unmak.webp" alt="Unmak Valve" style="--w: 92px" loading="lazy">
                 </div>
             </div>
         </div>
@@ -198,7 +195,7 @@
             </div>
             <div class="contact-container">
                 <div class="contact-info">
-                    <h3>Our Offices</h3>
+                    <h3>Get in touch</h3>
                     <div class="info-item">
                         <div class="info-icon">
                             <i class="fas fa-map-marker-alt"></i>
@@ -217,24 +214,26 @@
                             <p>Lumut, Perak, Malaysia</p>
                         </div>
                     </div>
-                    <div class="info-item">
+                    <a class="info-item info-link" href="tel:+60342706356">
                         <div class="info-icon">
                             <i class="fas fa-phone"></i>
                         </div>
                         <div>
-                            <h4>Phone</h4>
-                            <p><a href="tel:+60342706356">+60 3 4270 6356</a></p>
+                            <h4>Call us</h4>
+                            <p>+60 3 4270 6356</p>
                         </div>
-                    </div>
-                    <div class="info-item">
+                        <i class="fas fa-arrow-right info-arrow" aria-hidden="true"></i>
+                    </a>
+                    <a class="info-item info-link" href="mailto:info@paksisb.com">
                         <div class="info-icon">
                             <i class="fas fa-envelope"></i>
                         </div>
                         <div>
-                            <h4>Email</h4>
-                            <p><a href="mailto:info@paksisb.com">info@paksisb.com</a></p>
+                            <h4>Email us</h4>
+                            <p>info@paksisb.com</p>
                         </div>
-                    </div>
+                        <i class="fas fa-arrow-right info-arrow" aria-hidden="true"></i>
+                    </a>
                 </div>
                 <div class="contact-map">
                     <iframe
@@ -244,8 +243,6 @@
                         referrerpolicy="no-referrer-when-downgrade"
                         allowfullscreen></iframe>
                     <div class="contact-actions">
-                        <a href="tel:+60342706356" class="btn"><i class="fas fa-phone"></i> Call Us</a>
-                        <a href="mailto:info@paksisb.com" class="btn btn-outline"><i class="fas fa-envelope"></i> Email Us</a>
                         <a href="https://www.google.com/maps/dir/?api=1&destination=Dataran+Palma,+Jalan+Memanda+1/2,+68000+Ampang,+Selangor" class="btn btn-outline" target="_blank" rel="noopener"><i class="fas fa-directions"></i> Get Directions</a>
                     </div>
                 </div>
@@ -257,41 +254,24 @@
     <footer>
         <div class="container">
             <div class="footer-container">
-                <div class="footer-section">
-                    <h3>Paksi Laksana</h3>
-                    <p>Your trusted partner in defense and maritime trading. We provide specialized products and services with integrity and reliability to Malaysia's defense sector.</p>
+                <div class="footer-section footer-brand">
+                    <div class="footer-logo">
+                        <img src="logo/paksilogo.png" alt="">
+                        <span>Paksi Laksana Sdn Bhd</span>
+                    </div>
+                    <p>Naval and maritime supplies for Malaysia's defense sector, delivered with integrity and reliability since 2000.</p>
                 </div>
                 <div class="footer-section">
-                    <h3>Quick Links</h3>
-                    <ul class="footer-links">
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#about">About Us</a></li>
-                        <li><a href="#services">Services</a></li>
-                        <!--<li><a href="#clients">Clients</a></li>
-                        <li><a href="#brands">Brands</a></li>-->
-                        <li><a href="#contact">Contact Us</a></li>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-location-dot" aria-hidden="true"></i><span>E3A-M, Jalan Memanda 1/2, Dataran Palma,<br>68000 Ampang, Selangor</span></li>
+                        <li><i class="fas fa-phone" aria-hidden="true"></i><a href="tel:+60342706356">+60 3 4270 6356</a></li>
+                        <li><i class="fas fa-envelope" aria-hidden="true"></i><a href="mailto:info@paksisb.com">info@paksisb.com</a></li>
                     </ul>
                 </div>
-                <div class="footer-section">
-                    <h3>Services</h3>
-                    <ul class="footer-links">
-                        <li><a href="#services">Military Equipment Supply</a></li>
-                        <li><a href="#services">Technical Support</a></li>
-                        <li><a href="#services">Logistics Solutions</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h3>Certifications</h3>
-                    <p>All our products meet international quality and safety standards.</p>
-                </div>
             </div>
-            <div class="disclaimer">
-                <p>Company brands, product images and trademarks are the property of their respective owners. 
-                They are used for representation purposes only under authorized distribution or partnership agreements.</p>
-            </div>
-            
-            <div class="copyright">
-                <p>&copy; <span id="year">2025</span> Paksi Laksana Sdn Bhd. All Rights Reserved. | Established 2000</p>
+            <div class="footer-bottom">
+                <p class="copyright">&copy; <span id="year">2025</span> Paksi Laksana Sdn Bhd. All rights reserved.</p>
+                <p class="disclaimer">Company brands, product images and trademarks are the property of their respective owners. They are used for representation purposes only under authorized distribution or partnership agreements.</p>
             </div>
         </div>
     </footer>
@@ -299,18 +279,28 @@
     <a href="#home" class="back-to-top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></a>
 
     <script>
-        // Smooth scrolling for in-page links (offset for fixed header)
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                const targetElement = document.querySelector(this.getAttribute('href'));
-                if (!targetElement) return;
-                e.preventDefault();
-                document.getElementById('menu-toggle').checked = false;
-                window.scrollTo({
-                    top: targetElement.offsetTop - 70,
-                    behavior: 'smooth'
-                });
-            });
+        // Mobile menu: toggle, close on link tap, Escape, or tap outside
+        const menuButton = document.querySelector('.menu-icon');
+        const menuIcon = menuButton.querySelector('i');
+        const nav = document.getElementById('site-nav');
+        function setMenu(open) {
+            nav.classList.toggle('open', open);
+            menuButton.setAttribute('aria-expanded', open);
+            menuButton.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+            menuIcon.className = open ? 'fas fa-xmark' : 'fas fa-bars';
+        }
+        menuButton.addEventListener('click', () => setMenu(!nav.classList.contains('open')));
+        nav.querySelectorAll('a').forEach(link => link.addEventListener('click', () => setMenu(false)));
+        document.addEventListener('keydown', e => {
+            if (e.key === 'Escape' && nav.classList.contains('open')) {
+                setMenu(false);
+                menuButton.focus();
+            }
+        });
+        document.addEventListener('click', e => {
+            if (nav.classList.contains('open') && !nav.contains(e.target) && !menuButton.contains(e.target)) {
+                setMenu(false);
+            }
         });
 
         // Header style and back-to-top button on scroll
