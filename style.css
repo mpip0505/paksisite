@@ -587,39 +587,40 @@ nav ul li a.active::after {
     color: rgba(255, 255, 255, 0.8);
 }
 
-/* Phone and email rows are the contact actions */
+/* Phone and email rows: no box, the wording itself is the link */
 .info-link {
     color: white;
     text-decoration: none;
-    background-color: rgba(255, 255, 255, 0.04);
-    border: 1px solid rgba(255, 255, 255, 0.08);
     -webkit-tap-highlight-color: transparent;
-    transition: background-color 0.2s, border-color 0.2s, transform 0.2s var(--ease);
 }
 
-.info-arrow {
-    margin-left: auto;
-    padding-left: 16px;
-    color: rgba(255, 255, 255, 0.45);
-    transition: color 0.2s, transform 0.2s var(--ease);
+.info-link p {
+    display: inline-block;
+    background-image: linear-gradient(currentColor, currentColor);
+    background-size: 0% 1px;
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    transition: color 0.2s, background-size 0.25s var(--ease);
+}
+
+.info-link .info-icon {
+    transition: background-color 0.2s, border-color 0.2s;
 }
 
 @media (hover: hover) {
-    .info-link:hover {
-        background-color: rgba(255, 255, 255, 0.09);
-        border-color: rgba(255, 255, 255, 0.16);
+    .info-link:hover p {
+        color: var(--accent);
+        background-size: 100% 1px;
     }
 
-    .info-link:hover .info-arrow {
-        color: var(--accent);
-        transform: translateX(3px);
+    .info-link:hover .info-icon {
+        background-color: rgba(255, 255, 255, 0.14);
+        border-color: rgba(255, 255, 255, 0.24);
     }
 }
 
-.info-link:active {
-    background-color: rgba(255, 255, 255, 0.12);
-    transform: scale(0.98);
-    transition-duration: 0.1s;
+.info-link:active p {
+    color: var(--accent);
 }
 
 .info-link:focus-visible {
