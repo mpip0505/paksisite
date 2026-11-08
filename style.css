@@ -505,8 +505,6 @@ nav ul li a.active::after {
     width: var(--w, 110px);
     max-width: 100%;
     height: auto;
-    filter: grayscale(100%);
-    opacity: 0.85;
 }
 
 /* Contact Section */
